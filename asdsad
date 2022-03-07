@@ -1,0 +1,17 @@
+[33mcommit 7684e8a64bf2b63419eeeda6d1ed31fb5b3fc1e7[m[33m ([m[1;36mHEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32m60f9ee6323c14fe74b01d017d7a4d169b68732bc[m[33m)[m
+Author: Hyde <michael.argent.2002@hotmail.com>
+Date:   Sat Mar 5 21:22:03 2022 +0800
+
+    broken website(stupid scroll)
+
+[33mcommit 60f9ee6323c14fe74b01d017d7a4d169b68732bc[m
+Author: Hyde <michael.argent.2002@hotmail.com>
+Date:   Thu Mar 3 19:58:45 2022 +0800
+
+    -nav complete, ongoing Home resposivenising
+
+[33mcommit 1187faa32fd01984fb75bd2d69477180e4eb9102[m
+Author: Hyde <michael.argent.2002@hotmail.com>
+Date:   Sat Feb 12 11:40:07 2022 +0800
+
+    Initialize project using Create React App

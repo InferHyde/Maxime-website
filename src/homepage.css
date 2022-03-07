@@ -1,0 +1,379 @@
+/* hero section */
+
+.heroSection {
+  width: 100%;
+  margin: 18px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImageContainer {
+  width: 93.8%;
+  height: 380px;
+  box-shadow: var(--sfx-shadow);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* intro section */
+
+.introSection {
+  width: 100vw;
+  font-family: var(--f-JS);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introContainer {
+  width: 100vw;
+  /* min-height: 268px; */
+  color: var(--clr-darkgrey);
+  padding: 18px;
+  padding-bottom: 88px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--clr-primepurple);
+  /* border: 8px solid black; */
+}
+
+@media screen and (min-width: 680px) {
+  .introSection {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .introContainer {
+    width: 58vw;
+  }
+}
+
+.introText {
+  width: 88%;
+  padding: 38px 1%;
+}
+
+.introContainerButton {
+  color: var(--clr-darkgrey);
+  font-size: 20px;
+  background: var(--clr-lightpurple);
+}
+
+.introImageContainer {
+  width: 48%;
+  position: relative;
+  bottom: 3.8rem;
+  box-shadow: var(--sfx-shadow);
+  /* background: rgba(198, 198, 198, 0.68); */
+}
+
+.introImage {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 680px) {
+  .introSection {
+    margin-bottom: 88px;
+  }
+
+  .introImageContainer {
+    height: 380px;
+    left: -0.8rem;
+    bottom: 1.8rem;
+  }
+  .introImage {
+    max-width: 48rem;
+    min-height: 28rem;
+    object-fit: cover;
+  }
+}
+/* description Section */
+
+.descriptionSection {
+  width: 100vw;
+  padding-bottom: 138px;
+  font-family: var(--f-JS);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(62, 62, 62, 18%);
+}
+
+.descriptionHeading {
+  width: 100%;
+  text-align: center;
+  overflow: visible;
+  font-size: 38px;
+  font-weight: bold;
+  padding: 18px 0;
+}
+
+.descriptionCardContainer {
+  width: 98%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 680px) {
+  .descriptionCardContainer {
+    width: 98%;
+    max-width: 1380px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.descriptionCard {
+  width: 93.8%;
+  min-height: 398px;
+  margin-top: 18px;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--clr-darkgrey);
+}
+
+.descriptionTitle {
+  width: 18ch;
+  margin: 18px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  position: relative;
+}
+
+@media screen and (min-width: 680px) {
+  .descriptionCard {
+    width: 31%;
+  }
+  .descriptionTitle {
+    width: 88%;
+  }
+}
+
+.lineProperties {
+  bottom: -18px;
+  height: 2.8px;
+  width: 80%;
+}
+
+.desciprtiontext {
+  margin: 18px 8px;
+  line-height: 38px;
+}
+
+@media screen and (min-width: 680px) {
+  .desciprtiontext {
+    font-size: 12.8px;
+    line-height: 28px;
+  }
+}
+
+/* Blackboard Section */
+/* blackboardsection height requires manual changing */
+.blackboardSection {
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.blackboardBG {
+  position: absolute;
+  height: 680px;
+  width: 100%;
+  z-index: -1;
+  background: url("../public/Images/Red_bar.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  filter: blur(8px);
+}
+
+.blackboardContainer {
+  width: 93.8%;
+  max-width: 680px;
+  margin: 88px 0;
+  /* padding: 18px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../public/Images/purprle_board.png");
+  background-size: cover;
+}
+
+.blackboard {
+  width: 93.8%;
+  min-height: 480px;
+  margin: 8px;
+  padding-bottom: 188px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../public/Images/Black_board.jpg");
+  background-size: cover;
+}
+
+.blackboardTitle {
+  width: 16ch;
+  font-size: 18.8px;
+  font-family: var(--f-FtG);
+  margin: 18px;
+}
+
+.blackboardTextContainer {
+  width: 88%;
+  /* border: 2px solid red; */
+}
+
+.blackboardHeading {
+  font-size: 24px;
+  font-family: var(--f-FtG);
+  padding: 8px;
+}
+
+.chalkYellow {
+  -webkit-text-stroke: rgb(240, 240, 144) 0.1px;
+}
+
+.chalkPurple {
+  -webkit-text-stroke: purple 0.1px;
+}
+
+.chalkBlue {
+  -webkit-text-stroke: blue 0.1px;
+}
+
+.blackboardText {
+  font-size: 18px;
+  font-family: var(--f-FtG);
+  padding: 8px;
+}
+
+@media screen and (min-width: 680px) {
+  .blackboardTitle {
+    width: auto;
+    font-size: 28px;
+  }
+  .blackboardHeading {
+    font-size: 33.8px;
+    margin: 38px 0;
+  }
+  .blackboardText {
+    font-size: 20px;
+  }
+}
+
+/* Menu Section */
+
+.menuSection {
+  color: var(--clr-darkgrey);
+  font-family: var(--f-JS);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-purplewhite);
+}
+
+.menuSectionImageContainer {
+  width: 100%;
+}
+
+.menuSectionImage {
+  width: 100%;
+  height: 100%;
+}
+
+.menuSectionBoldText {
+  width: 88%;
+  font-size: 28px;
+  /* font-weight: normal; */
+  padding: 18px 0;
+}
+.menuSectionText {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 680px) {
+  .menuSectionBoldText {
+    font-size: 38px;
+    margin-top: 38px;
+  }
+  .menuSectionText {
+    width: 88%;
+    font-size: 22px;
+  }
+}
+
+.menuSectionButton {
+  color: var(--clr-darkgrey);
+  margin: 38px 0 38px 0;
+  border: 2px solid var(--clr-primepurple);
+}
+
+/* gallery section */
+
+.gallerySection {
+  width: 100vw;
+  color: var(--clr-darkgrey);
+  font-family: var(--f-JS);
+  margin-top: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--clr-primepurple);
+}
+
+.gallerySectionImageContainer {
+  width: 38%;
+  position: relative;
+  top: -28px;
+  box-shadow: var(--sfx-lightShadow);
+  background-color: var(--clr-darkgrey);
+}
+
+.gallerySectionImage {
+  width: 100%;
+}
+
+.gallerySectionTitle {
+  font-size: 36px;
+}
+
+.gallerySectionHeading {
+  padding-top: 28px;
+  font-size: 28px;
+}
+
+.gallerySectionButton {
+  color: var(--clr-darkgrey);
+  font-size: 28px;
+  font-family: var(--f-JS);
+  margin: 38px 0 68px 0;
+  background-color: var(--clr-lightpurple);
+}
+
+@media screen and (min-width: 680px) {
+  .gallerySectionImageContainer {
+    width: 48%;
+    height: auto;
+    /* top: -28px; */
+    /* border: red solid 1px; */
+  }
+  .gallerySectionImage {
+    width: 100%;
+  }
+}

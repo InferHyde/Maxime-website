@@ -1,0 +1,121 @@
+.BGdarkGrey {
+  background: var(--clr-darkgrey);
+}
+
+.pictureBlockSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pictureBlockContainer {
+  width: 118px;
+  height: 118px;
+  margin: 18px 8px 0 8px;
+}
+
+.pictureBlock {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+}
+
+@media screen and (min-width: 680px) {
+  .pictureBlockSection {
+    width: auto;
+  }
+  .pictureBlockContainer {
+    width: 138px;
+    height: 138px;
+  }
+}
+
+.neonDisplaySection {
+  width: 100vw;
+  /* height: 1000px; */
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 1px 1px 88px rgba(113, 75, 125, 0.88);
+  background: url("../public/Images/Steel_display.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.displayTitle {
+  margin-top: 38px;
+  font-size: 48px;
+  color: #87848d;
+}
+
+@media screen and (min-width: 680px) {
+  .displayTitle {
+    font-size: 58px;
+  }
+}
+
+/* gallery box section */
+
+.galleryImageContainer {
+  width: 98%;
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: var(--sfx-lightShadow);
+}
+
+.galleryImageContainer > * + * {
+  margin-left: 20px;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+}
+
+.ImageContainerVerticalSmall {
+  width: 50%;
+  position: relative;
+}
+
+.ImageContainerHorizontalBig {
+  position: relative;
+}
+
+.ImageContainerVerticalBig {
+  position: relative;
+}
+
+.galleryDescriptionFrame {
+  width: 100%;
+  height: 100%;
+  color: var(--clr-darkgrey);
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.galleryDescriptionFrame:hover {
+  background: rgba(198, 198, 198, 0.68);
+  opacity: 1;
+}
+
+.galleryDescriptionFrametitle {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+@media screen and (min-width: 680px) {
+  .galleryDescriptionFrametitle {
+    font-size: 38px;
+  }
+  .galleryDescriptionFrameText {
+    font-size: 22px;
+  }
+}

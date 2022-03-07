@@ -1,0 +1,19 @@
+/* Nav  */
+@media screen and (min-width: 980px) {
+  /* 980px is not an error */
+  .navBarSection {
+    height: 13.8vh;
+  }
+}
+
+@media screen and (min-width: 908px) {
+  .heroSection {
+    margin-bottom: 12.8vh;
+  }
+  .heroImageContainer {
+    height: 68vh;
+  }
+}
+
+@media screen and (min-width: 908px) {
+}

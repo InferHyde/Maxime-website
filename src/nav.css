@@ -1,0 +1,110 @@
+.navBarSection {
+  width: 100vw;
+  height: 118px;
+  position: fixed;
+  z-index: 8;
+  background: #181818;
+}
+
+.navBar {
+  width: 100%;
+  height: 88%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width: 680px) {
+  .navBar {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+
+.logoContainer {
+  width: 200px;
+  margin: 0 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer > img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.logoContainer > img {
+  animation: disapear-appear 8800ms;
+}
+
+.logoContainer > .chineseName {
+  position: absolute;
+  font-size: 2.8rem;
+  z-index: 0;
+}
+
+@media screen and (min-width: 680px) {
+  .logoContainer {
+    width: 280px;
+    height: auto;
+    padding-bottom: 0.8rem;
+  }
+
+  .logoContainer > .chineseName {
+    font-size: 3.38rem;
+  }
+}
+
+@keyframes disapear-appear {
+  0% {
+    opacity: 100%;
+  }
+
+  38% {
+    opacity: 0;
+  }
+
+  68% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.navBtnContainer {
+  width: 88%;
+  height: auto;
+  max-width: 318px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  font-size: 22px;
+  /* border: red solid 2px; */
+}
+
+.navBtn {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.activeNavBtn {
+  border-bottom: solid 2px var(--clr-primepurple);
+}
+
+@media screen and (min-width: 680px) {
+  .navBtnContainer {
+    margin-left: 38px;
+    padding-bottom: 0.4rem;
+  }
+  .navBtn {
+    font-size: 23.8px;
+  }
+}

@@ -1,0 +1,67 @@
+.menuUISection {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterSection {
+  padding-bottom: 48px;
+  background-color: #f9eded;
+}
+
+.filterButtonsContainer {
+  width: 98%;
+  padding-top: 38px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.primaryFilterButton {
+  color: var(--clr-primepurple);
+  font-size: 28px;
+  border: transparent;
+  border-bottom: solid 1.8px var(--clr-primepurple);
+  margin: 0 18px 0 8px;
+  background-color: transparent;
+}
+
+.secondaryFilterButton {
+  color: var(--clr-primepurple);
+  font-size: 18px;
+  margin: 8px 8px 0 8px;
+  border: transparent;
+  border-bottom: solid 1.8px var(--clr-primepurple);
+  background-color: transparent;
+}
+
+@media screen and (min-width: 680px) {
+  .menuUISection {
+    flex-direction: row;
+  }
+  .filterSection {
+    width: 58%;
+    height: 800px;
+    overflow: auto;
+    /* why does 1% height work */
+    margin: 0 18px 88px 18px;
+    padding-bottom: 188px;
+    position: sticky;
+    top: 138px;
+    /* border: red 2px solid; */
+  }
+
+  .filterButtonsContainer {
+    flex-direction: column;
+    align-items: center;
+    /* border: red 2px solid; */
+  }
+  .primaryFilterButton {
+    display: block;
+    margin: 8px;
+    /* border: red 2px solid; */
+  }
+  .secondaryFilterButton {
+    margin: 8px 0;
+  }
+}
+
+/* menu item filter section */

@@ -1,13 +1,105 @@
-body {
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(./Fonts/JosefinSans-Regular.ttf);
+}
+
+:root {
+  --clr-darkgrey: #181818;
+  --clr-primepurple: #714c7d;
+  --clr-lightpurple: #9b709e;
+  --clr-purplewhite: #e8e4e4;
+
+  --sfx-shadow: 8px 18px 18px 10px rgba(0, 0, 0, 0.38);
+  --sfx-lightShadow: 0 3px 30px 1px rgba(0, 0, 0, 0.38);
+  --sfx-coolshadow: 0 50px 100px 0 rgba(0, 0, 0, 0.38);
+
+  --btn-height: 48px;
+  --btn-width: 188px;
+
+  --f-JS: "Josefin Sans";
+  --f-FtG: "Fredericka the Great", cursive;
+}
+
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("Maxime_Background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h2 {
+  font-size: 38px;
+}
+p {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 680px) {
+  h2 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 22px;
+  }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* .webpageContainer {
+  width: 100vw;
+  padding: 118px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 908px) {
+  .webpageContainer {
+    width: 100vw;
+    padding: 12.8vh 0 0 0;
+    border: 2px red solid;
+  }
+} */
+
+.purpleLine {
+  position: absolute;
+  background-color: var(--clr-primepurple);
+}
+
+.navigationButton {
+  width: 188px;
+  height: 48px;
+  font-size: 28px;
+  border-radius: 8px;
+  box-shadow: var(--sfx-lightShadow);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 680px) {
+  .navigationButton {
+    width: 238px;
+    height: 68px;
+  }
 }

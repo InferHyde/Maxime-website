@@ -1,7 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import './homepage.css'
-import './responsive900.css'
 import {Pic_2, Pic_3, Pic_4, Pic_5} from './data'
 import {GiForkKnifeSpoon} from 'react-icons/gi'
 

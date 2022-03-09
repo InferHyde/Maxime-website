@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './gallery.css'
 import Swiper from './Swiper'
 
@@ -21,37 +20,39 @@ function Gallery() {
         <section className='neonDisplaySection'>
             <div className='displayTitle'>What's New?</div>
             <Swiper />
-            <div className='galleryImageContainer'>
-                <div className='ImageContainerVerticalSmall'>
-                    <img className='galleryImage' src={Pic_6} />
-                    <div className='galleryDescriptionFrame'>
-                        <div className='galleryDescriptionFrametitle'>title</div>
-                        <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div className='galleryImagesContainer'>
+                <div className='galleryImageContainer'>
+                    <div className='ImageContainerVerticalSmall'>
+                        <img className='galleryImage' src={Pic_6} />
+                        <div className='galleryDescriptionFrame'>
+                            <div className='galleryDescriptionFrametitle'>title</div>
+                            <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
+                    </div>
+                    <div className='ImageContainerVerticalSmall'>
+                        <img className='galleryImage' src={Pic_7}/>
+                        <div className='galleryDescriptionFrame'>
+                            <div className='galleryDescriptionFrametitle'>title</div>
+                            <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
                     </div>
                 </div>
-                <div className='ImageContainerVerticalSmall'>
-                    <img className='galleryImage' src={Pic_7}/>
-                    <div className='galleryDescriptionFrame'>
-                        <div className='galleryDescriptionFrametitle'>title</div>
-                        <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div className='galleryImageContainer'>
+                    <div className='ImageContainerHorizontalBig'>
+                        <img className='galleryImage' src={Pic_8} />
+                        <div className='galleryDescriptionFrame'>
+                            <div className='galleryDescriptionFrametitle'>title</div>
+                            <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='galleryImageContainer'>
-                <div className='ImageContainerHorizontalBig'>
-                    <img className='galleryImage' src={Pic_8} />
-                    <div className='galleryDescriptionFrame'>
-                        <div className='galleryDescriptionFrametitle'>title</div>
-                        <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                    </div>
-                </div>
-            </div>
-            <div className='galleryImageContainer'>
-                <div className='ImageContainerVerticalBig'>
-                    <img className='galleryImage' src={Pic_9} />
-                    <div className='galleryDescriptionFrame'>
-                        <div className='galleryDescriptionFrametitle'>title</div>
-                        <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div className='galleryImageContainer'>
+                    <div className='ImageContainerVerticalBig'>
+                        <img className='galleryImage' src={Pic_9} />
+                        <div className='galleryDescriptionFrame'>
+                            <div className='galleryDescriptionFrametitle'>title</div>
+                            <div className='galleryDescriptionFrameText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
                     </div>
                 </div>
             </div>

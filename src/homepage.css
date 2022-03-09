@@ -22,15 +22,14 @@
 /* intro section */
 
 .introSection {
-  width: 100vw;
-  font-family: var(--f-JS);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .introContainer {
-  width: 100vw;
+  width: 100%;
   /* min-height: 268px; */
   color: var(--clr-darkgrey);
   padding: 18px;
@@ -50,7 +49,7 @@
   }
 
   .introContainer {
-    width: 58vw;
+    width: 58%;
   }
 }
 
@@ -91,15 +90,13 @@
   .introImage {
     max-width: 48rem;
     min-height: 28rem;
-    object-fit: cover;
   }
 }
 /* description Section */
 
 .descriptionSection {
-  width: 100vw;
+  width: 100%;
   padding-bottom: 138px;
-  font-family: var(--f-JS);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,6 +108,7 @@
   text-align: center;
   overflow: visible;
   font-size: 38px;
+  font-family: var(--f-JS);
   font-weight: bold;
   padding: 18px 0;
 }
@@ -146,7 +144,8 @@
 }
 
 .descriptionTitle {
-  width: 18ch;
+  font-family: var(--f-JS);
+  max-width: 18ch;
   margin: 18px 0;
   display: flex;
   justify-content: center;
@@ -169,13 +168,13 @@
   width: 80%;
 }
 
-.desciprtiontext {
+.descriprtionText {
   margin: 18px 8px;
   line-height: 38px;
 }
 
 @media screen and (min-width: 680px) {
-  .desciprtiontext {
+  .descriprtionText {
     font-size: 12.8px;
     line-height: 28px;
   }
@@ -193,7 +192,7 @@
 
 .blackboardBG {
   position: absolute;
-  height: 680px;
+  height: 100%;
   width: 100%;
   z-index: -1;
   background: url("../public/Images/Red_bar.jpg");
@@ -300,7 +299,6 @@
 .menuSectionBoldText {
   width: 88%;
   font-size: 28px;
-  /* font-weight: normal; */
   padding: 18px 0;
 }
 .menuSectionText {
@@ -327,14 +325,18 @@
 /* gallery section */
 
 .gallerySection {
-  width: 100vw;
+  width: 100%;
   color: var(--clr-darkgrey);
   font-family: var(--f-JS);
   margin-top: 58px;
+  background: var(--clr-primepurple);
+}
+
+.gallerySectionContainer {
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--clr-primepurple);
 }
 
 .gallerySectionImageContainer {
@@ -347,6 +349,11 @@
 
 .gallerySectionImage {
   width: 100%;
+}
+.gallerySectionTextsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallerySectionTitle {
@@ -367,11 +374,24 @@
 }
 
 @media screen and (min-width: 680px) {
-  .gallerySectionImageContainer {
+  .gallerySectionContainer {
+    height: 28rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gallerySectionTextsContainer {
     width: 48%;
-    height: auto;
-    /* top: -28px; */
-    /* border: red solid 1px; */
+  }
+
+  .gallerySectionImageContainer {
+    height: 108%;
+    top: 0.8px;
+  }
+
+  .gallerySectionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .gallerySectionImage {
     width: 100%;

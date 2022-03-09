@@ -31,8 +31,10 @@
   }
 }
 
+/* neon Display Section */
+
 .neonDisplaySection {
-  width: 100vw;
+  width: 100%;
   /* height: 1000px; */
   margin-top: 38px;
   display: flex;
@@ -56,7 +58,15 @@
   }
 }
 
-/* gallery box section */
+/* slider in another css */
+
+/* psuedo gallery box section */
+
+.galleryImagesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .galleryImageContainer {
   width: 98%;
@@ -117,5 +127,34 @@
   }
   .galleryDescriptionFrameText {
     font-size: 22px;
+  }
+}
+
+/* picture blocks section */
+@media (min-width: 980px) {
+  .pictureBlockSection {
+    width: 680px;
+  }
+
+  .pictureBlockContainer {
+    width: 118px;
+    height: 118px;
+  }
+}
+
+/* neon display section */
+
+@media (min-width: 980px) {
+  .displayTitle {
+    font-size: 2.8rem;
+  }
+  /* gallery image section */
+  .galleryImagesContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .galleryImageContainer {
+    width: 48%;
   }
 }

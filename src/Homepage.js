@@ -25,26 +25,26 @@ function Homepage() {
             </div>
         </section>
         
-        {/* <section className='descriptionSection'>
+        <section className='descriptionSection'>
             <div className='descriptionHeading'>Our Restaurant</div>
             <div className='descriptionCardContainer'>
                 <div className='descriptionCard'>
                     <div className='descriptionTitle'>This is just a good restaurant<div className='purpleLine lineProperties' /></div>
-                    <div className='desciprtiontext'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
+                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
                     <div className='iconContainer'><GiForkKnifeSpoon size={68}/></div>
                 </div>
                 <div className='descriptionCard'>
                     <div className='descriptionTitle'>This is just a good restaurant<div className='purpleLine lineProperties' /></div>
-                    <div className='desciprtiontext'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
+                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
                     <div className='iconContainer'><GiForkKnifeSpoon size={68}/></div>
                 </div>
                 <div className='descriptionCard'>
                     <div className='descriptionTitle'>This is just a good restaurant<div className='purpleLine lineProperties' /></div>
-                    <div className='desciprtiontext'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
+                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
                     <div className='iconContainer'><GiForkKnifeSpoon size={68}/></div>
                 </div>
             </div>
-        </section> */}
+        </section>
 
         <section className='blackboardSection'>
             <div className='blackboardBG' />
@@ -83,12 +83,16 @@ function Homepage() {
         </section>
 
         <section className='gallerySection'>
-            <div className='gallerySectionImageContainer'>
-                < img className='gallerySectionImage' src={Pic_5}/>
+            <div className='gallerySectionContainer'>
+                <div className='gallerySectionImageContainer'>
+                    < img className='gallerySectionImage' src={Pic_5}/>
+                </div>
+                <div className='gallerySectionTextsContainer'>
+                    <h2 className='gallerySectionTitle'>Explore our restaurant</h2>
+                    <div className='gallerySectionHeading'>Discover the beauty of Maxime, find our exciting events</div>
+                    <NavLink to='/Gallery' className='navigationButton gallerySectionButton'>View Gallery</NavLink>
+                </div>
             </div>
-            <h2 className='gallerySectionTitle'>Explore our restaurant</h2>
-            <div className='gallerySectionHeading'>Discover the beauty of Maxime, find our exciting events</div>
-            <NavLink to='/Gallery' className='navigationButton gallerySectionButton'>View Gallery</NavLink>
         </section>
     </main>
   )

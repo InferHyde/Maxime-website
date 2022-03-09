@@ -1,3 +1,13 @@
+/* index */
+@media (min-width: 980px) {
+  h2 {
+    font-size: 3.8rem;
+  }
+
+  .navigationButton {
+    font-size: 1.58rem;
+  }
+}
 /* Nav  */
 @media screen and (min-width: 980px) {
   /* 980px is not an error */
@@ -6,7 +16,10 @@
   }
 }
 
-@media screen and (min-width: 908px) {
+/* INTROPAGE */
+
+/* hero section */
+@media screen and (min-width: 980px) {
   .heroSection {
     margin-bottom: 12.8vh;
   }
@@ -15,5 +28,36 @@
   }
 }
 
-@media screen and (min-width: 908px) {
+/* intro section */
+@media screen and (min-width: 980px) {
+  .introText {
+    line-height: 34px;
+  }
 }
+
+/* descritpion section */
+@media (min-width: 980px) {
+  .descriprtionText {
+    font-size: 17px;
+    padding: 0 1.8rem;
+  }
+}
+
+/* menu section */
+@media (min-width: 980px) {
+  .menuSectionImageContainer {
+    height: 63.8vh;
+  }
+  .menuSectionText {
+    font-size: 1.58rem;
+  }
+}
+
+/* gallery section */
+@media (min-width: 980px) {
+  .gallerySectionContainer {
+    max-width: 80rem;
+  }
+}
+
+/* GALLERY PAGE */

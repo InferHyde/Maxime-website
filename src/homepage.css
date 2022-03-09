@@ -60,12 +60,12 @@
 
 .introContainerButton {
   color: var(--clr-darkgrey);
-  font-size: 20px;
+  /* font-size: 20px; */
   background: var(--clr-lightpurple);
 }
 
 .introImageContainer {
-  width: 48%;
+  width: 68%;
   position: relative;
   bottom: 3.8rem;
   box-shadow: var(--sfx-shadow);
@@ -144,12 +144,13 @@
 }
 
 .descriptionTitle {
-  font-family: var(--f-JS);
   max-width: 18ch;
   margin: 18px 0;
+  font-family: var(--f-JS);
+  font-size: 28px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
-  font-size: 28px;
   position: relative;
 }
 
@@ -171,6 +172,7 @@
 .descriprtionText {
   margin: 18px 8px;
   line-height: 38px;
+  font-family: var(--f-JS);
 }
 
 @media screen and (min-width: 680px) {
@@ -279,6 +281,7 @@
 /* Menu Section */
 
 .menuSection {
+  width: 100%;
   color: var(--clr-darkgrey);
   font-family: var(--f-JS);
   display: flex;
@@ -307,7 +310,7 @@
 
 @media screen and (min-width: 680px) {
   .menuSectionBoldText {
-    font-size: 38px;
+    font-size: 2.38rem;
     margin-top: 38px;
   }
   .menuSectionText {
@@ -340,7 +343,7 @@
 }
 
 .gallerySectionImageContainer {
-  width: 38%;
+  width: 58%;
   position: relative;
   top: -28px;
   box-shadow: var(--sfx-lightShadow);
@@ -378,12 +381,14 @@
     height: 28rem;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
   }
   .gallerySectionTextsContainer {
     width: 48%;
   }
 
   .gallerySectionImageContainer {
+    width: 38%;
     height: 108%;
     top: 0.8px;
   }
@@ -395,5 +400,113 @@
   }
   .gallerySectionImage {
     width: 100%;
+  }
+}
+
+/* hero section */
+@media screen and (min-width: 980px) {
+  .heroSection {
+    margin-bottom: 12.8vh;
+  }
+  .heroImageContainer {
+    height: 68vh;
+  }
+}
+
+/* intro section */
+@media screen and (min-width: 980px) {
+  .introText {
+    line-height: 34px;
+  }
+  .descriprtionText {
+    font-size: 17px;
+    padding: 0 1.8rem;
+  }
+  .menuSectionImageContainer {
+    height: 63.8vh;
+  }
+  .menuSectionImage {
+    object-fit: cover;
+  }
+  .menuSectionText {
+    font-size: 1.58rem;
+  }
+  .gallerySectionContainer {
+    max-width: 80rem;
+  }
+  .gallerySectionButton {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .introSection {
+    height: 78vh;
+    max-height: 1188px;
+    min-height: 35rem;
+  }
+  .introContainer {
+    height: 100%;
+    width: 48%;
+    justify-content: center;
+  }
+  .introImageContainer {
+    height: 108%;
+    width: 52%;
+    bottom: 0;
+  }
+  .introImage {
+    max-width: none;
+  }
+  .descriptionTitle {
+    margin-top: 88px;
+    font-size: 2.38rem;
+  }
+  .descriprtionText {
+    font-size: 1.18rem;
+    line-height: 1.8rem;
+  }
+  .iconContainer {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 1480px) {
+  .introText {
+    line-height: 2.38rem;
+  }
+  .introContainerButton {
+    margin-top: 38px;
+  }
+  .descriptionCardContainer {
+    /* height: 68vh; */
+    max-width: none;
+  }
+  .descriptionHeading {
+    font-size: 2.88rem;
+  }
+  .descriptionTitle {
+    font-size: 3.18rem;
+    margin-top: 38px;
+  }
+  .descriprtionText {
+    width: 78%;
+    font-size: 1.68rem;
+    line-height: 2.8rem;
+  }
+  .iconContainer {
+    margin-top: 8rem;
+  }
+  .menuSectionText {
+    font-size: 1.8rem;
+  }
+  .gallerySectionContainer {
+    height: 580px;
+  }
+  .gallerySectionTitle {
+    font-size: 2.38rem;
+  }
+  .gallerySectionHeading {
+    font-size: 1.8rem;
   }
 }

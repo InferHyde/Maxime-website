@@ -89,6 +89,19 @@
   }
   .sliderImageContainer {
     width: 280%;
-    height: 488px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1480px) {
+  .swiper {
+    height: 68vh;
+  }
+  .sliderHeading {
+    font-size: 3.38rem;
+  }
+  .sliderText {
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
 }

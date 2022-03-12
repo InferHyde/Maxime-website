@@ -42,21 +42,23 @@ const Categories = (props) =>{
               <button className='primaryFilterButton' onClick={()=>filterItems("Appetizer")}>
                   Appetizer
               </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Soup")}>
-                  Soup
-              </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Salad")}>
-                  Salad
-              </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Veggie Platter")}>
-                  Veggie Platter
-              </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Meat Platter")}>
-                  Meat Platter
-              </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Bruchetta")}>
-                  Bruchetta
-              </button>
+              <div className='secondaryFilterButtonsContainer'>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Soup")}>
+                    Soup
+                </button>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Salad")}>
+                    Salad
+                </button>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Veggie Platter")}>
+                    Veggie Platter
+                </button>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Meat Platter")}>
+                    Meat Platter
+                </button>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Bruchetta")}>
+                    Bruchetta
+                </button>
+              </div>
             </div>
             <div className='filterButtonsContainer'>
               <button className='primaryFilterButton' onClick={()=>filterItems("Main Course")}>

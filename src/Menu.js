@@ -39,7 +39,7 @@ function Menu() {
                 <div className='menuRecommendationTitle'>Recommendation:</div>
                 
                 {/* menu Functionality */}
-                <div className='menuItemsContainer'>
+                <div className='menuRecommendationItemsContainer'>
                   <div className='menuRecommendationItemContainer'>
                     <div className='menuItemTitle'>Goldren Waffles<div className='purpleLine lineProperties' /></div>
                   

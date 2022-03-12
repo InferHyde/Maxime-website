@@ -17,16 +17,26 @@
 
 .primaryFilterButton {
   color: var(--clr-primepurple);
+  margin: 0 18px 0 8px;
   font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
   border: transparent;
   border-bottom: solid 1.8px var(--clr-primepurple);
-  margin: 0 18px 0 8px;
   background-color: transparent;
+}
+.secondaryFilterButtonsContainer {
+  width: 98%;
+  padding-top: 38px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .secondaryFilterButton {
   color: var(--clr-primepurple);
   font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
   margin: 8px 8px 0 8px;
   border: transparent;
   border-bottom: solid 1.8px var(--clr-primepurple);
@@ -46,7 +56,6 @@
     padding-bottom: 188px;
     position: sticky;
     top: 138px;
-    /* border: red 2px solid; */
   }
 
   .filterButtonsContainer {
@@ -54,14 +63,42 @@
     align-items: center;
     /* border: red 2px solid; */
   }
+
   .primaryFilterButton {
     display: block;
     margin: 8px;
     /* border: red 2px solid; */
   }
+
+  .secondaryFilterButtonsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .secondaryFilterButton {
     margin: 8px 0;
   }
 }
 
 /* menu item filter section */
+@media (min-width: 980px) {
+  .filterSection {
+    width: 288px;
+    height: 1%;
+    margin-top: 38px;
+    position: static;
+  }
+}
+@media (min-width: 1280px) {
+  .menuUISection {
+    width: 89%;
+  }
+}
+@media (min-width: 1480px) {
+  .primaryFilterButton {
+    font-size: 2.18rem;
+  }
+  .secondaryFilterButton {
+    font-size: 1.38rem;
+  }
+}

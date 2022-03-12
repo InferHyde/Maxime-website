@@ -3,12 +3,19 @@
 export const Maxime_logo = './Images/Maxime_logo.jpg'
 
 //Homepage 
+// export const Homepage_pics = {
+//   Pic_1: './Images/Maxime_logo.jpg',
+//   Pic_2: './Images/Wine_table.jpg',
+//   Pic_3:'./Images/concept_structure.jpg',
+//   Pic_4:'./Images/Fine_dining.jpg' ,
+//   Pic_5:'./Images/Restaurant_prost.jpg'
+// }
 
 export const Pic_1 = './Images/Maxime_logo.jpg'
 export const Pic_2 =  './Images/Wine_table.jpg'
 export const Pic_3 ='./Images/concept_structure.jpg'
 export const Pic_4 ='./Images/Fine_dining.jpg' 
-export const Pic_5 ='./Images/Restaurant_prost.jpg' 
+export const Pic_5 ='./Images/Restaurant_prost.jpg'
 
 //Gallery
 
@@ -25,7 +32,12 @@ export const Pic_12 ='./Images/A04.JPG'
 export const Pic_13 ='./Images/E01.JPG'
 export const Pic_14 ='./Images/f02.JPG' 
 export const Pic_15 ='./Images/g02.jpg' 
-export const Pic_16 ='./Images/Maxime_Map.jpg' 
+
+//Info
+
+export const Pic_16 = './Images/wechat_icon.webp'
+export const Pic_17 = './Images/tiktok_icon.png'
+export const Pic_18 ='./Images/Maxime_Map.jpg' 
 
 
 

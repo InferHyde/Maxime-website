@@ -16,7 +16,9 @@ function Nav() {
                 <NavLink to='/Gallery' className='navBtn' activeClassName='activeNavBtn'>Gallery</NavLink>
                 <NavLink to='/Menu' className='navBtn' activeClassName='activeNavBtn'>Menu</NavLink>
                 <NavLink to='/Info' className='navBtn' activeClassName='activeNavBtn'>Info</NavLink>
-                {/* <div className='navMenu'>Menu</div> */}
+                {/* <div className='navbtn'>join</div>
+                <div className='navbtn'>join</div> */}
+
                 {/* <div className='navInfo'>Info</div> */}
             </div>
             

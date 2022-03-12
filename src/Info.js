@@ -1,6 +1,6 @@
 import React from 'react'
 import './info.css';
-import {Pic_16} from './data'
+import {Pic_16, Pic_17, Pic_18} from './data'
 
 function Info() {
   return (
@@ -13,8 +13,8 @@ function Info() {
                   <div className='infoText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                   <div className='infoText'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                   <div className='infoIconsContainer'>
-                    <div className='infoIconContainer'>Icon 1</div>
-                    <div className='infoIconContainer'>Icon 2</div>
+                    <div className='infoIconContainer'><img className='infoIcon' src={Pic_16}/></div>
+                    <div className='infoIconContainer'><img className='infoIcon' src={Pic_17} /></div>
                   </div>
               </div>
               <div className='infoBox'>
@@ -25,7 +25,7 @@ function Info() {
               </div>
             </div>
             <div className='mapImageContainer'>
-              <img className='mapImage' src={Pic_16} />
+              <img className='mapImage' src={Pic_18} />
             </div>
         </section>
 

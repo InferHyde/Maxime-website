@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import './homepage.css'
-import {Pic_2, Pic_3, Pic_4, Pic_5} from './data'
+// import {Pic_2, Pic_3, Pic_4, Pic_5} from './data'
 import {GiForkKnifeSpoon} from 'react-icons/gi'
 
 
@@ -10,7 +10,7 @@ function Homepage() {
     <main className='webpageContainer'>
         <section className='heroSection'>
             <div className='heroImageContainer'>
-                <img className='heroImage' src={Pic_2}/>
+                <img className='heroImage' src='./Images/Wine_table.jpg'/>
             </div>
         </section>
         <section className='introSection'>
@@ -20,7 +20,7 @@ function Homepage() {
                 <NavLink to='/Menu' className='navigationButton introContainerButton'>Make reservation</NavLink>
             </div>
             <div className='introImageContainer'>
-                <img className='introImage' src={Pic_3}/>
+                <img className='introImage' src='./Images/concept_structure.jpg'/>
             </div>
         </section>
         
@@ -46,7 +46,7 @@ function Homepage() {
         </section>
 
         <section className='blackboardSection'>
-            <div className='blackboardBG' />
+            <img className='blackboardBG' src='./Images/Red_bar.jpg' />
             <div className='blackboardContainer'>
                 <div className='blackboard'>
                     <div className='blackboardTitle'>Maxime services include...</div>
@@ -72,7 +72,7 @@ function Homepage() {
 
         <section className='menuSection'>
                 <div className='menuSectionImageContainer'>
-                    <img className='menuSectionImage' src={Pic_4}/>
+                    <img className='menuSectionImage' src='./Images/Fine_dining.jpg' />
                 </div>
                 <h2 className='menuSectionBoldText'>
                     Take a look at what we have to offer
@@ -84,7 +84,7 @@ function Homepage() {
         <section className='gallerySection'>
             <div className='gallerySectionContainer'>
                 <div className='gallerySectionImageContainer'>
-                    < img className='gallerySectionImage' src={Pic_5}/>
+                    < img className='gallerySectionImage' src='./Images/Restaurant_prost.jpg' />
                 </div>
                 <div className='gallerySectionTextsContainer'>
                     <h2 className='gallerySectionTitle'>Explore our restaurant</h2>

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 100vw;
-  background-image: url("Maxime_Background.jpeg");
+  background-image: url("Maxime_background.jpeg");
   background-color: var(--clr-purplewhite);
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,29 +25,9 @@
   background: var(--clr-purplewhite);
 }
 
-@media screen and (min-width: 680px) {
-  .infoSection {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .InfosContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .infoBox {
-    width: 48%;
-    height: 800px;
-    margin: 38px 0;
-  }
-}
-
 .infoHeading {
   margin-inline: auto;
-  width: 8ch;
+  width: 78%;
   font-size: 38px;
   margin-bottom: 38px;
 }
@@ -74,6 +54,10 @@
   align-items: center;
   background-color: #c8c8c8;
 }
+.infoIcon {
+  height: 100%;
+  width: 100%;
+}
 
 .mapImageContainer {
   width: 88%;
@@ -84,9 +68,56 @@
 
 .mapImage {
   width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 680px) {
+  .infoSection {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .InfosContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .infoBox {
+    width: 48%;
+    min-height: 800px;
+    margin: 38px 0;
+    padding: 0 38px;
+  }
+  .infoHeading {
+    height: 3ch;
+    margin-top: 18px;
+  }
 }
 
-/* @media screen and (min-width:680px){
-.mapImageContainer {
-  width: ;
-} */
+@media screen and (min-width: 980px) {
+  .InfosContainer {
+    width: 68%;
+    min-height: 680px;
+  }
+
+  .mapImageContainer {
+    width: 68%;
+    height: 80vh;
+  }
+}
+
+@media (min-width: 1280px) {
+  .infoHeading {
+    font-size: 2.38rem;
+  }
+  .infoText {
+    font-size: 1.38rem;
+  }
+}
+
+@media (min-width: 1480px) {
+  .infoText {
+    font-size: 1.8rem;
+  }
+}

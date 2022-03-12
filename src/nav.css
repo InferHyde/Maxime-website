@@ -40,11 +40,12 @@
 
 .logoContainer > img {
   animation: disapear-appear 8800ms;
+  animation-delay: 1.8s;
 }
 
 .logoContainer > .chineseName {
   position: absolute;
-  font-size: 2.8rem;
+  font-size: 2.38rem;
   z-index: 0;
 }
 
@@ -96,6 +97,10 @@
   text-decoration: none;
 }
 
+.navBtn:hover {
+  border-bottom: solid 2px var(--clr-primepurple);
+}
+
 .activeNavBtn {
   border-bottom: solid 2px var(--clr-primepurple);
 }
@@ -103,11 +108,52 @@
 @media screen and (min-width: 680px) {
   .navBtnContainer {
     width: 38vw;
+    max-width: none;
     min-width: 318px;
     margin-left: 38px;
     padding-bottom: 0.4rem;
   }
   .navBtn {
     font-size: 23.8px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  /* 980px is not an error */
+  .navBarSection {
+    height: 13.8vh;
+  }
+  .logoContainer {
+    width: 200px;
+  }
+  .logoContainer > .chineseName {
+    font-size: 2.38rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .logoContainer {
+    width: 18vw;
+
+    /* border: 10px red solid; */
+  }
+  .navBtnContainer {
+    justify-content: center;
+  }
+  .navBtn {
+    font-size: 1.18em;
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 1480px) {
+  .logoContainer {
+    width: 20rem;
+  }
+  .navBtn {
+    font-size: 1.8rem;
+  }
+  .logoContainer > .chineseName {
+    font-size: 3.8rem;
   }
 }

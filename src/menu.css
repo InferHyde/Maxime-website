@@ -2,7 +2,7 @@
   /* height: 100vh; */
   color: var(--clr-darkgrey);
   background-color: var(--clr-purplewhite);
-  background-image: url(Maxime_Background.jpeg);
+  background-image: url("Maxime_background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: exclusion;
@@ -109,10 +109,10 @@
 
 .menuContainer {
   width: 100%;
-  padding-bottom: 38px;
   margin-bottom: 88px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: var(--clr-purplewhite);
   color: var(--clr-darkgrey);
   /* remove background later */
@@ -129,7 +129,8 @@
   font-weight: bold;
 }
 
-.menuItemsContainer {
+.menuItemsContainer,
+.menuRecommendationItemsContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -169,7 +170,6 @@
 }
 
 .menuItemPrice {
-  position: relative;
   text-align: start;
   margin-top: 8px;
   font-weight: bold;
@@ -189,5 +189,92 @@
   }
   .menuRecommendationItemContainer > .menuItemDescription {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 980px) {
+  .menuContainer {
+    margin-bottom: 0;
+  }
+  .menuRecommendationTitle {
+    width: 88%;
+  }
+
+  .menuSelectionImagesContainer {
+    width: 88%;
+  }
+  .menuRecommendationItemsContainer {
+    width: 88%;
+  }
+  .menuRecommendationItemContainer {
+    width: 30%;
+    border-bottom: 2.8px solid var(--clr-primepurple);
+  }
+
+  .menuItemContainer,
+  .menuRecommendationItemContainer {
+    width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1.8px solid var(--clr-primepurple);
+  }
+  .menuItemTitle,
+  .menuRecommendationItemContainer > .menuItemTitle {
+    width: 60%;
+  }
+  .menuItemPrice,
+  .menuRecommendationItemContainer > .menuItemPrice {
+    width: 40%;
+    height: 88px;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .menuItemDescription {
+    width: 100%;
+  }
+
+  .menuItemTitle .lineProperties {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1480px) {
+  .menuImageContainer {
+    height: 488px;
+  }
+  .menuImageContainer2 {
+    height: 488px;
+    bottom: 28rem;
+  }
+  .menuSelectionTitle {
+    width: 58%;
+    font-size: 4.8rem;
+  }
+  .menuSelectionImageContainer {
+    height: 338px;
+  }
+  .menuRecommendationTitle {
+    font-size: 2.38rem;
+  }
+  .menuRecommendationItemContainer > .menuItemTitle {
+    font-size: 1.68rem;
+  }
+
+  .menuItemTitle {
+    font-size: 1.38rem;
+  }
+  .menuRecommendationItemContainer > .menuItemPrice {
+    font-size: 1.38rem;
+  }
+  .menuItemPrice {
+    font-size: 1.18rem;
+  }
+  .menuRecommendationItemContainer > .menuItemDescription {
+    font-size: 1.38rem;
+  }
+  .menuItemDescription {
+    font-size: 1.18rem;
   }
 }

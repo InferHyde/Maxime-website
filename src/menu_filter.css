@@ -10,7 +10,8 @@
 
 .filterButtonsContainer {
   width: 98%;
-  padding-top: 38px;
+  padding-top: 18px;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -24,12 +25,13 @@
   border: transparent;
   border-bottom: solid 1.8px var(--clr-primepurple);
   background-color: transparent;
+  cursor: pointer;
 }
 .secondaryFilterButtonsContainer {
   width: 98%;
-  padding-top: 38px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .secondaryFilterButton {
@@ -41,6 +43,7 @@
   border: transparent;
   border-bottom: solid 1.8px var(--clr-primepurple);
   background-color: transparent;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 680px) {
@@ -51,7 +54,6 @@
     width: 58%;
     height: 800px;
     overflow: auto;
-    /* why does 1% height work */
     margin: 0 18px 88px 18px;
     padding-bottom: 188px;
     position: sticky;

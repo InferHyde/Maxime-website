@@ -1,11 +1,36 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import {NavLink, useLocation} from 'react-router-dom'
 import { Maxime_logo } from './data'
 import './nav.css'
 
 function Nav() {
+  const [navbarBG, setNavbarBG] = useState(false)
+  let location = useLocation();
+  const changeNavBackground = () => {
+    console.log(window.scrollY)
+    if (window.scrollY >= 66 && location === '/') {
+      setNavbarBG(true)
+    } else {
+      setNavbarBG(false)
+    }
+  }
+
+  useEffect(() =>{
+    changeNavBackground()
+    window.addEventListener("scroll", changeNavBackground)
+    console.log(navbarBG)
+  })
+
+  // function usePageViews() {
+  //   useEffect(() => {
+  //     console.log(location.pathname);
+  //   }, [location]);
+  // }
+  // usePageViews()
+
+
   return (
-    <section className='navBarSection'>
+    <section className={}>
         <div className='navBar'>
             <div className='logoContainer'>
                 <img src={Maxime_logo}/>

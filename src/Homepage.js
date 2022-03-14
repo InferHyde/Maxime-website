@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useRef, useMemo, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
 import './homepage.css'
 // import {Pic_2, Pic_3, Pic_4, Pic_5} from './data'
@@ -6,16 +6,48 @@ import {GiForkKnifeSpoon} from 'react-icons/gi'
 
 
 function Homepage() {
+    const targetRef = useRef(null);
+    const [isVisable, setIsVisable] = useState(false);
+
+    const callbackFunction = entries =>{
+        const [entry] = entries; //const entry = entries[0]
+        setIsVisable(entry.isIntersecting);
+    }
+
+    const options = useMemo(()=>{
+        return {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0
+        }
+    },[]);
+    
+useEffect(()=>{
+    const observer = new IntersectionObserver(callbackFunction, options)
+    const currentTarget = targetRef.current;
+    if (currentTarget) observer.observe(currentTarget); 
+
+    return()=>{
+        if(currentTarget) observer.unobserve(currentTarget);
+    }
+},[targetRef, options]);
+
   return (
     <main className='webpageContainer'>
         <section className='heroSection'>
-            <div className='heroImageContainer'>
-                <img className='heroImage' src='./Images/Wine_table.jpg'/>
-            </div>
+            <div className='heroSectionContainer'>
+                <div className='heroTitle'>Welcome to Maxime</div>
+                <div className='heroSubTitle'>Come take a look around and enjoy yourself</div>
+                <div className='navButtonContainer'>
+                    <NavLink to='/Menu' className='navButton'>see our menu</NavLink>
+                    <NavLink to='/Menu' className='navButton'>make a reservation</NavLink>
+                    <NavLink to='/Menu' className='navButton'>checkout whats new</NavLink>
+                </div>
+            </div>   
         </section>
-        <section className='introSection'>
+        <section className='introSection' ref={targetRef}>
             <div className='introContainer'>
-                <h2>Maxime</h2>
+                <h2>Maxime <p>{!isVisable ? "not in view port" : "in viewport"}</p></h2>
                 <p className='introText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam excepturi libero ullam mollitia qui! Iusto, aperiam? Modi dolores accusantium voluptas aspernatur officiis, officia dolore. Asperiores.</p>
                 <NavLink to='/Menu' className='navigationButton introContainerButton'>Make reservation</NavLink>
             </div>
@@ -97,4 +129,11 @@ function Homepage() {
   )
 }
 
+
 export default Homepage
+
+        {/* <section className='heroSection'>
+            <div className='heroImageContainer'>
+                <img className='heroImage' src='./Images/Wine_table.jpg'/>
+            </div>
+        </section> */}

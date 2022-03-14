@@ -20,7 +20,7 @@ function Slider() {
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
-        //   navigation
+          navigation
           pagination={{ clickable: true}}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}

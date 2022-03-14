@@ -64,26 +64,30 @@ const Categories = (props) =>{
               <button className='primaryFilterButton' onClick={()=>filterItems("Main Course")}>
                   Main Course
               </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Flammekuche")}>
-                Flammekuche
-              </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Steak")}>
-                Steak
-              </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Sides")}>
-                Sides
-              </button>
+              <div className='secondaryFilterButtonsContainer'>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Flammekuche")}>
+                  Flammekuche
+                </button>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Steak")}>
+                  Steak
+                </button>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Sides")}>
+                  Sides
+                </button>
+              </div>
             </div>
             <div className='filterButtonsContainer'>
               <button className='primaryFilterButton' onClick={()=>filterItems("Desert")}>
                   Desert
               </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Cake")}>
-                Cake
-              </button>
-              <button className='secondaryFilterButton' onClick={()=>filterItems2("Ice Cream")}>
-                Ice Cream
-              </button>
+              <div className='secondaryFilterButtonsContainer'>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Cake")}>
+                  Cake
+                </button>
+                <button className='secondaryFilterButton' onClick={()=>filterItems2("Ice Cream")}>
+                  Ice Cream
+                </button>
+              </div>
             </div>
             <div className='filterButtonsContainer'>
               <button className='primaryFilterButton' onClick={()=>filterItems("Drinks")}>

@@ -3,11 +3,13 @@ import {NavLink} from 'react-router-dom'
 import './homepage.css'
 // import {Pic_2, Pic_3, Pic_4, Pic_5} from './data'
 import {GiForkKnifeSpoon} from 'react-icons/gi'
+import Reservation_form from './Reservation_form'
 
 
 function Homepage() {
     const targetRef = useRef(null);
     const [isVisable, setIsVisable] = useState(false);
+    const [isDisplayingForm, setIsDisplayingForm] = useState(false)
 
     const callbackFunction = entries =>{
         const [entry] = entries; //const entry = entries[0]
@@ -33,15 +35,16 @@ useEffect(()=>{
 },[targetRef, options]);
 
   return (
-    <main className='webpageContainer'>
+    <main className='webpageContainer padding0'>
+        {isDisplayingForm && <Reservation_form />}
         <section className='heroSection'>
             <div className='heroSectionContainer'>
                 <div className='heroTitle'>Welcome to Maxime</div>
                 <div className='heroSubTitle'>Come take a look around and enjoy yourself</div>
                 <div className='navButtonContainer'>
-                    <NavLink to='/Menu' className='navButton'>see our menu</NavLink>
-                    <NavLink to='/Menu' className='navButton'>make a reservation</NavLink>
-                    <NavLink to='/Menu' className='navButton'>checkout whats new</NavLink>
+                    <button className='heroNavButton' ><NavLink to='/Menu' className='heroNavlink'>see our menu</NavLink></button>
+                    <button className='heroNavButton' onClick={()=>setIsDisplayingForm(true)}>make a reservation</button>
+                    <button className='heroNavButton' ><NavLink to='/Menu' className='heroNavlink'>check out whats new</NavLink></button>
                 </div>
             </div>   
         </section>

@@ -7,8 +7,9 @@ function Nav() {
   const [navbarBG, setNavbarBG] = useState(false)
   let location = useLocation();
   const changeNavBackground = () => {
-    console.log(window.scrollY)
-    if (window.scrollY >= 66 && location === '/') {
+    // console.log(window.scrollY)
+    // console.log(location)
+    if (window.scrollY <= 88 && location.pathname === '/') {
       setNavbarBG(true)
     } else {
       setNavbarBG(false)
@@ -18,7 +19,9 @@ function Nav() {
   useEffect(() =>{
     changeNavBackground()
     window.addEventListener("scroll", changeNavBackground)
-    console.log(navbarBG)
+    return () => {
+      window.removeEventListener('scroll', changeNavBackground);
+    };
   })
 
   // function usePageViews() {
@@ -30,7 +33,7 @@ function Nav() {
 
 
   return (
-    <section className={}>
+    <section className={navbarBG ? 'navBarSectionTransparent' : 'navBarSection'}>
         <div className='navBar'>
             <div className='logoContainer'>
                 <img src={Maxime_logo}/>

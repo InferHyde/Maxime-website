@@ -1,6 +1,6 @@
 //Nav 
 
-export const Maxime_logo = './Images/Maxime_logo.jpg'
+export const Maxime_logo = './Images/Maxime_logo.png'
 
 //Homepage 
 // export const Homepage_pics = {

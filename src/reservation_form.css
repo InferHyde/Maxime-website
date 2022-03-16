@@ -1,0 +1,49 @@
+.reservationFormSection {
+  width: 98vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(24, 24, 24, 0.68);
+  z-index: 8;
+}
+
+.reservationContainer {
+  width: 88%;
+  max-width: 588px;
+  height: 94vh;
+  margin-top: 3.8vh;
+  padding: 18px;
+  margin-inline: auto;
+  color: var(--clr-darkgrey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-purplewhite);
+}
+
+.formHeading {
+  font-size: 1.68rem;
+  font-family: var(--f-JS);
+  margin-top: 18px;
+}
+
+.formInput,
+.formInputMessage {
+  width: 88%;
+  max-width: 388px;
+  height: 38px;
+}
+
+.formInputMessage {
+  height: 188px;
+}
+
+.formSubmitButton {
+  height: 38px;
+  width: 88%;
+  max-width: 388px;
+  margin-top: 8px;
+  font-size: 1.38rem;
+  font-family: var(--f-JS);
+}

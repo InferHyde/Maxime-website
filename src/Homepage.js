@@ -4,39 +4,18 @@ import './homepage.css'
 // import {Pic_2, Pic_3, Pic_4, Pic_5} from './data'
 import {GiForkKnifeSpoon} from 'react-icons/gi'
 import Reservation_form from './Reservation_form'
+import './reservation_form.css'
+
 
 
 function Homepage() {
-    const targetRef = useRef(null);
-    const [isVisable, setIsVisable] = useState(false);
     const [isDisplayingForm, setIsDisplayingForm] = useState(false)
+    const [formType, setFormType] = useState('text')
 
-    const callbackFunction = entries =>{
-        const [entry] = entries; //const entry = entries[0]
-        setIsVisable(entry.isIntersecting);
-    }
 
-    const options = useMemo(()=>{
-        return {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0
-        }
-    },[]);
-    
-useEffect(()=>{
-    const observer = new IntersectionObserver(callbackFunction, options)
-    const currentTarget = targetRef.current;
-    if (currentTarget) observer.observe(currentTarget); 
-
-    return()=>{
-        if(currentTarget) observer.unobserve(currentTarget);
-    }
-},[targetRef, options]);
 
   return (
     <main className='webpageContainer padding0'>
-        {isDisplayingForm && <Reservation_form />}
         <section className='heroSection'>
             <div className='heroSectionContainer'>
                 <div className='heroTitle'>Welcome to Maxime</div>
@@ -48,9 +27,9 @@ useEffect(()=>{
                 </div>
             </div>   
         </section>
-        <section className='introSection' ref={targetRef}>
+        <section className='introSection' >
             <div className='introContainer'>
-                <h2>Maxime <p>{!isVisable ? "not in view port" : "in viewport"}</p></h2>
+                <h2>Maxime</h2>
                 <p className='introText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam excepturi libero ullam mollitia qui! Iusto, aperiam? Modi dolores accusantium voluptas aspernatur officiis, officia dolore. Asperiores.</p>
                 <NavLink to='/Menu' className='navigationButton introContainerButton'>Make reservation</NavLink>
             </div>
@@ -114,6 +93,17 @@ useEffect(()=>{
                 </h2>
                 <div className='menuSectionText'>Check out our amazing western style menu available during lunch and dinner at Maxime. Open all days(10am-3am)</div>
                 <NavLink to='/Menu' className='navigationButton menuSectionButton'>Menu</NavLink>
+                <div className='menuSectionText'>Or</div>
+                <section className='reservationSection'>
+                    <h2 className='menuSectionBoldText'>Make a reservation</h2>
+                    <form className='reservationSectionForm' onSubmit={handleReservationFormSubmit()}>
+                        <input className='reservationSectionInput' type='text' placeholder='Date' onFocus={(e) => (e.target.type = 'date')} onBlur={(e) => (e.target.type = 'text' ) } />
+                        <input className='reservationSectionInput' type='text' placeholder='Time' onFocus={(e) => (e.target.type) = 'time' } onBlur={(e) => (e.target.type = 'text') } />
+                        <input className='reservationSectionInput' type='number' placeholder='Party Size'/>
+                        <input className=' purpleSubmitButton' type='submit' value='Submit' />
+                    </form>
+                </section>
+                {isDisplayingForm && <Reservation_form isDisplaying={isDisplayingForm} setDisplaying={setIsDisplayingForm} />}
         </section>
 
         <section className='gallerySection'>

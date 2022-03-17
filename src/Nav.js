@@ -7,8 +7,6 @@ function Nav() {
   const [navbarBG, setNavbarBG] = useState(false)
   let location = useLocation();
   const changeNavBackground = () => {
-    // console.log(window.scrollY)
-    // console.log(location)
     if (window.scrollY <= 88 && location.pathname === '/') {
       setNavbarBG(true)
     } else {

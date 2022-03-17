@@ -22,6 +22,12 @@
   right: -1.8%;
   border: solid 3.8px #3e3e3e;
   background-color: var(--clr-purplewhite);
+  transition: all 880ms ease-out;
+}
+
+.menuImageContainerInactive {
+  opacity: 0;
+  transform: translateX(-200%);
 }
 
 .menuImageContainer2 {
@@ -32,6 +38,11 @@
   right: -83%;
   border: solid 3.8px #3e3e3e;
   background-color: var(--clr-purplewhite);
+  transition: all 880ms ease-out;
+}
+
+.menuImageContainer2Inactive {
+  transform: translateX(400%);
 }
 
 @media screen and (min-width: 680px) {

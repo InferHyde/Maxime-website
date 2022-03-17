@@ -23,6 +23,12 @@
   padding: 18px 38px 138px 38px;
   box-shadow: var(--sfx-coolshadow);
   background: var(--clr-purplewhite);
+  transition: all 880ms ease-out;
+}
+
+.infoBoxInactive {
+  opacity: 0;
+  transform: translateX(-200%);
 }
 
 .infoHeading {

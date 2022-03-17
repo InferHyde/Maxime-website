@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Reservation_form from './Reservation_form'
+import {Reservation_form} from './Reservation_form'
 
 ReactDOM.render(
   <React.StrictMode>

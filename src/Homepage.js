@@ -1,21 +1,66 @@
-import React,{useState, useRef, useMemo, useEffect} from 'react'
+import React,{useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
+
 import './homepage.css'
 // import {Pic_2, Pic_3, Pic_4, Pic_5} from './data'
-import {GiForkKnifeSpoon} from 'react-icons/gi'
-import Reservation_form from './Reservation_form'
 import './reservation_form.css'
 
+//Assets
+import {Reservation_section} from './Reservation_form'
+import {GiForkKnifeSpoon} from 'react-icons/gi'
+import {Reservation_form} from './Reservation_form'
 
 
 function Homepage() {
     const [isDisplayingForm, setIsDisplayingForm] = useState(false)
-    const [formType, setFormType] = useState('text')
+    const [isIntroActive, setIsIntroActive] = useState(false)
+    const [isCardActive, setIsCardActive] = useState(false)
+    const [isGalleryActive, setIsGalleryActive] = useState(false)
+    //one time animations - intro image's transition
+    const introActiveAnimation = () =>{
+        if (window.scrollY >= 138 && window.scrollY <= 1480 ){
+            setIsIntroActive(true)
+        }
+        else{
+            setIsIntroActive(false)
+        }
+    }
+    const descriptionActiveAnimation = () =>{
+        if (window.scrollY >= 888 && window.scrollY <= 10788 ){
+            setIsCardActive(true)
+        }
+        else{
+            setIsCardActive(false)
+        }
+    }
+    const galleryActivateAnimation = () =>{
+        const webpageHeight = document.documentElement.scrollHeight
+        if (window.scrollY >= (webpageHeight - 1280)){
+            setIsGalleryActive(true)
+        }
+        else{
+            setIsGalleryActive(false)
+        }
+    }
 
+    useEffect(() =>{
+        introActiveAnimation()
+        descriptionActiveAnimation()
+        galleryActivateAnimation()
+        window.addEventListener("scroll", introActiveAnimation )
+        window.addEventListener("scroll", descriptionActiveAnimation )
+        window.addEventListener('scroll',galleryActivateAnimation)
+        return () => {
+          window.removeEventListener('scroll', introActiveAnimation);
+          window.removeEventListener('scroll', descriptionActiveAnimation);
+          window.removeEventListener('scroll', galleryActivateAnimation);
 
+        };
+      })
 
   return (
     <main className='webpageContainer padding0'>
+        {isDisplayingForm && <Reservation_form setDisplaying={setIsDisplayingForm} />}
         <section className='heroSection'>
             <div className='heroSectionContainer'>
                 <div className='heroTitle'>Welcome to Maxime</div>
@@ -29,11 +74,11 @@ function Homepage() {
         </section>
         <section className='introSection' >
             <div className='introContainer'>
-                <h2>Maxime</h2>
-                <p className='introText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam excepturi libero ullam mollitia qui! Iusto, aperiam? Modi dolores accusantium voluptas aspernatur officiis, officia dolore. Asperiores.</p>
+                <h2 className={isIntroActive ? 'introTitleText':'introTitleTextInactive'}>Maxime</h2>
+                <p className={isIntroActive ? 'introText':'introTextInactive'} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam excepturi libero ullam mollitia qui! Iusto, aperiam? Modi dolores accusantium voluptas aspernatur officiis, officia dolore. Asperiores.</p>
                 <NavLink to='/Menu' className='navigationButton introContainerButton'>Make reservation</NavLink>
             </div>
-            <div className='introImageContainer'>
+            <div className={isIntroActive ? 'introImageContainer' : 'introImageContainerInactive'}>
                 <img className='introImage' src='./Images/concept_structure.jpg'/>
             </div>
         </section>
@@ -41,19 +86,19 @@ function Homepage() {
         <section className='descriptionSection'>
             <div className='descriptionHeading'>Our Restaurant</div>
             <div className='descriptionCardContainer'>
-                <div className='descriptionCard'>
+                <div className={isCardActive ? 'descriptionCard': 'descriptionCardInactive'} id='card1'>
                     <div className='descriptionTitle'>This is just a good restaurant<div className='purpleLine lineProperties' /></div>
-                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
+                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa</div>
                     <div className='iconContainer'><GiForkKnifeSpoon size={68}/></div>
                 </div>
-                <div className='descriptionCard'>
+                <div className={isCardActive ? 'descriptionCard': 'descriptionCardInactive'} id='card2'>
                     <div className='descriptionTitle'>This is just a good restaurant<div className='purpleLine lineProperties' /></div>
-                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
+                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa</div>
                     <div className='iconContainer'><GiForkKnifeSpoon size={68}/></div>
                 </div>
-                <div className='descriptionCard'>
+                <div className={isCardActive ? 'descriptionCard': 'descriptionCardInactive'} id='card3'>
                     <div className='descriptionTitle'>This is just a good restaurant<div className='purpleLine lineProperties' /></div>
-                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa, cum hic! Sed aliquid facilis vel obcaecati et?</div>
+                    <div className='descriprtionText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, reprehenderit quas officia aut sint illo dolore odio iusto. Illo id porro voluptatibus facere nulla tempore officia voluptate, voluptatem autem culpa</div>
                     <div className='iconContainer'><GiForkKnifeSpoon size={68}/></div>
                 </div>
             </div>
@@ -94,21 +139,12 @@ function Homepage() {
                 <div className='menuSectionText'>Check out our amazing western style menu available during lunch and dinner at Maxime. Open all days(10am-3am)</div>
                 <NavLink to='/Menu' className='navigationButton menuSectionButton'>Menu</NavLink>
                 <div className='menuSectionText'>Or</div>
-                <section className='reservationSection'>
-                    <h2 className='menuSectionBoldText'>Make a reservation</h2>
-                    <form className='reservationSectionForm' onSubmit={handleReservationFormSubmit()}>
-                        <input className='reservationSectionInput' type='text' placeholder='Date' onFocus={(e) => (e.target.type = 'date')} onBlur={(e) => (e.target.type = 'text' ) } />
-                        <input className='reservationSectionInput' type='text' placeholder='Time' onFocus={(e) => (e.target.type) = 'time' } onBlur={(e) => (e.target.type = 'text') } />
-                        <input className='reservationSectionInput' type='number' placeholder='Party Size'/>
-                        <input className=' purpleSubmitButton' type='submit' value='Submit' />
-                    </form>
-                </section>
-                {isDisplayingForm && <Reservation_form isDisplaying={isDisplayingForm} setDisplaying={setIsDisplayingForm} />}
+                <Reservation_section />
         </section>
 
         <section className='gallerySection'>
             <div className='gallerySectionContainer'>
-                <div className='gallerySectionImageContainer'>
+                <div className={isGalleryActive ? 'gallerySectionImageContainer' : 'gallerySectionImageContainerInactive'}>
                     < img className='gallerySectionImage' src='./Images/Restaurant_prost.jpg' />
                 </div>
                 <div className='gallerySectionTextsContainer'>
@@ -125,8 +161,3 @@ function Homepage() {
 
 export default Homepage
 
-        {/* <section className='heroSection'>
-            <div className='heroImageContainer'>
-                <img className='heroImage' src='./Images/Wine_table.jpg'/>
-            </div>
-        </section> */}

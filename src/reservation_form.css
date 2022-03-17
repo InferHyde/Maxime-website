@@ -1,10 +1,53 @@
+/* webpage form section */
+.reservationSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reservationSectionForm {
+  width: 88%;
+  max-width: 1388px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservationSectionInput {
+  width: 68%;
+  height: 38px;
+  border-radius: 0;
+  margin-bottom: 8px;
+}
+
+.purpleSubmitButton {
+  width: 188px;
+  height: 48px;
+  margin-bottom: 38px;
+  color: white;
+  font-size: 1.38rem;
+  border-color: transparent;
+  border-radius: 1.8px;
+  background-color: var(--clr-primepurple);
+  box-shadow: var(--sfx-lightShadow);
+}
+
+/* Actual form section */
 .reservationFormSection {
-  width: 98vw;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
+  z-index: 18;
+}
+
+.reservationFormBG {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
   background-color: rgba(24, 24, 24, 0.68);
-  z-index: 8;
+  z-index: -1;
 }
 
 .reservationContainer {
@@ -15,11 +58,47 @@
   padding: 18px;
   margin-inline: auto;
   color: var(--clr-darkgrey);
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--clr-purplewhite);
+}
+
+.closingCross {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.closingCross:before,
+.closingCross:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: rgba(24, 24, 24, 0.88);
+}
+
+.closingCross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.closingCross:after {
+  top: 50%;
+  right: 0;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
 }
 
 .formHeading {
@@ -46,4 +125,36 @@
   margin-top: 8px;
   font-size: 1.38rem;
   font-family: var(--f-JS);
+}
+
+@media (min-width: 680px) {
+  .reservationSectionForm {
+    width: 88%;
+    margin-bottom: 68px;
+    flex-direction: row;
+    /* border: 2px red solid; */
+  }
+  .closingCross {
+    width: 28px;
+    height: 28px;
+    top: 18px;
+    right: 18px;
+  }
+  .reservationSectionInput {
+    height: 48px;
+    width: 28%;
+    margin: 0 8px;
+    font-size: 1rem;
+  }
+  .purpleSubmitButton {
+    width: 16%;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .reservationSectionInput {
+    height: 58px;
+  }
 }

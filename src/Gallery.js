@@ -98,10 +98,10 @@ function Gallery() {
 
 export default Gallery
 
-{/* <div className='galleryImageContainer'>
-<img className='galleryImage' src='./Images/F01.JPG'/>
-<div className='galleryTextContainer'>
-    <div className='galleryTextTitle'>Sub Heading</div>
-    <div className='galleryTextDescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod alias, ratione reprehenderit facilis omnis inventore recusandae enim modi.</div>
-</div>
-</div> */}
+
+
+        {/* <section className='heroSection'>
+            <div className='heroImageContainer'>
+                <img className='heroImage' src='./Images/Wine_table.jpg'/>
+            </div>
+        </section> */}

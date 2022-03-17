@@ -1,15 +1,30 @@
-import React from 'react'
+import React ,{useState,useEffect} from 'react'
 import './menu.css'
 import Menu_filter from './Menu_filter'
 import {Pic_10, Pic_11, Pic_12,Pic_13,Pic_14,Pic_15} from './data'
 
 function Menu() {
+  const [isImageActive, setIsImageActive] = useState(false)
+
+  // menuImageActivationAnimation=()=>{
+  //     setIsImageActive(true)
+  //   }
+  //   else{
+  //     setIsImageActive(false)
+  //   }
+  // }
+
+  useEffect(()=>{
+    setIsImageActive(true)
+  },[])
+
+
   return (
     <main className='webpageContainer BGpurplewhite'>
         <section className='menuImageSection'>
-            <div className='menuImageContainer'>
+            <div className={`menuImageContainer ${!isImageActive&&'menuImageContainerInactive'}`}>
                 <img className='menuImage' src={Pic_10}  />
-                <div className='menuImageContainer2' >
+                <div className={`menuImageContainer2 ${!isImageActive&&'menuImageContainer2Inactive'}`} >
                     <img className='menuImage' src={Pic_11} />
                 </div>
             </div>
@@ -72,3 +87,4 @@ function Menu() {
 }
 
 export default Menu
+

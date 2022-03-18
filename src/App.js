@@ -8,9 +8,6 @@ import Gallery from './Gallery'
 import Menu from './Menu';
 import Info from './Info';
 import Footbar from './Footbar';
-// import ScrollToTop from './ScrollToTop';
-
-
 
 
 function ScrollToTop() {

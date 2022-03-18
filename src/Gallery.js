@@ -2,19 +2,16 @@ import React from 'react'
 import './gallery.css'
 import Swiper from './Swiper'
 
-import {PictureBlocks, Pic_6, Pic_7, Pic_8, Pic_9} from './data'
+import {Pic_6, Pic_7, Pic_8, Pic_9} from './data'
 
 function Gallery() {
   return (
     <main className='webpageContainer BGdarkGrey'>
-        <section className='pictureBlockSection'>
-            {PictureBlocks.map((pictureBlock)=>{
-                return(
-                    <div className='pictureBlockContainer'>
-                        <img className='pictureBlock' src={pictureBlock} />
-                    </div>
-                )
-            })}
+        <section className='galleryHeroSection'>
+            <div className='galleryHeroImageContainer'>
+                <img className='galleryHeroImage' src='./Images/Wine_table.jpg'/>
+                <img className='galleryHeroImage glassOverlay' src='./Images/glass_crack.png'/>
+            </div>
         </section>
         
         <section className='neonDisplaySection'>
@@ -99,9 +96,3 @@ function Gallery() {
 export default Gallery
 
 
-
-        {/* <section className='heroSection'>
-            <div className='heroImageContainer'>
-                <img className='heroImage' src='./Images/Wine_table.jpg'/>
-            </div>
-        </section> */}

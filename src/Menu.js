@@ -6,14 +6,6 @@ import {Pic_10, Pic_11, Pic_12,Pic_13,Pic_14,Pic_15} from './data'
 function Menu() {
   const [isImageActive, setIsImageActive] = useState(false)
 
-  // menuImageActivationAnimation=()=>{
-  //     setIsImageActive(true)
-  //   }
-  //   else{
-  //     setIsImageActive(false)
-  //   }
-  // }
-
   useEffect(()=>{
     setIsImageActive(true)
   },[])

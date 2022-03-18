@@ -18,7 +18,7 @@ function Homepage() {
     const [isGalleryActive, setIsGalleryActive] = useState(false)
     //one time animations - intro image's transition
     const introActiveAnimation = () =>{
-        if (window.scrollY >= 138 && window.scrollY <= 1480 ){
+        if (window.scrollY >= 138 ){
             setIsIntroActive(true)
         }
         else{
@@ -26,7 +26,7 @@ function Homepage() {
         }
     }
     const descriptionActiveAnimation = () =>{
-        if (window.scrollY >= 888 && window.scrollY <= 10788 ){
+        if (window.scrollY >= 888 ){
             setIsCardActive(true)
         }
         else{
@@ -56,7 +56,7 @@ function Homepage() {
           window.removeEventListener('scroll', galleryActivateAnimation);
 
         };
-      })
+      },[])
 
   return (
     <main className='webpageContainer padding0'>

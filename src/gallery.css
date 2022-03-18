@@ -1,41 +1,46 @@
+/* slider in another css */
+
 .BGdarkGrey {
   background: var(--clr-darkgrey);
 }
-
-.pictureBlockSection {
+/* gallery hero section */
+.galleryHeroSection {
+  width: 100%;
+  margin: 18px 0;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-.pictureBlockContainer {
-  width: 118px;
-  height: 118px;
-  margin: 18px 8px 0 8px;
+.galleryHeroImageContainer {
+  width: 88%;
+  max-width: 888px;
+  height: 380px;
+  position: relative;
+  box-shadow: var(--sfx-shadow);
 }
 
-.pictureBlock {
+.galleryHeroImage {
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  object-fit: cover;
 }
 
-@media screen and (min-width: 680px) {
-  .pictureBlockSection {
-    width: auto;
-  }
-  .pictureBlockContainer {
-    width: 138px;
-    height: 138px;
-  }
+.glassOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 280ms ease-out;
+}
+
+.glassOverlay:hover {
+  opacity: 1;
 }
 
 /* neon Display Section */
 
 .neonDisplaySection {
   width: 100%;
-  /* height: 1000px; */
   margin-top: 38px;
   padding-bottom: 88px;
   display: flex;
@@ -58,8 +63,6 @@
     font-size: 58px;
   }
 }
-
-/* slider in another css */
 
 /* psuedo gallery box section */
 
@@ -136,18 +139,6 @@
   }
 }
 
-/* picture blocks section */
-@media (min-width: 980px) {
-  .pictureBlockSection {
-    width: 680px;
-  }
-
-  .pictureBlockContainer {
-    width: 118px;
-    height: 118px;
-  }
-}
-
 /* neon display section */
 
 @media (min-width: 980px) {
@@ -159,13 +150,10 @@
   .galleryImagesContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: auto auto; */
-    /* border: blue 1px solid; */
   }
   .galleryImageContainer {
     width: 98;
     height: auto;
-    /* border: red 1px solid; */
   }
   .verticalSmall {
     grid-row: auto/span 1;
@@ -180,13 +168,6 @@
 }
 
 @media (min-width: 1480px) {
-  .pictureBlockSection {
-    width: 1280px;
-  }
-  .pictureBlockContainer {
-    width: 148px;
-    height: 148px;
-  }
   .galleryDescriptionFrametitle {
     font-size: 3.38rem;
   }

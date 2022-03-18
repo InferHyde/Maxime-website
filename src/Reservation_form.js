@@ -9,12 +9,7 @@ export const Reservation_section = () =>{
   const [reservationTime, setReservationTime] = useState('')
   const [reservationPartySize, setReservationPartySize] = useState('')
 
-  // useEffect(()=>{  
-  //   console.log(reservationDate)
-  //   console.log(reservationTime)
-  //   console.log(reservationPartySize)
-  // }
-  // )
+
 return(
   <section className='reservationSection'>
     <h2 className='menuSectionBoldText'>Make a reservation</h2>
@@ -53,10 +48,8 @@ export const Reservation_form = ({setDisplaying, date, time, size}) => {
     document.getElementById('dateInput').value = date;
     document.getElementById('timeInput').value = time;
     document.getElementById('sizeInput').value = size;
-    // document.getElementById('dateInput').value = "2014-02-02";
-    // document.getElementById('timeInput').value = '08:00'
-    // document.getElementById('sizeInput').value = '2'
-  })
+
+  },[])
   
 
 
@@ -67,15 +60,15 @@ export const Reservation_form = ({setDisplaying, date, time, size}) => {
           <div className='closingCross' onClick={()=>{setDisplaying(false)}}/>
           <h2 className='reservationTitle'>Reservation</h2>
           <label className='formHeading'>Name</label>
-          <input className='formInput' type="text" name="user_name" placeholder='Dave'/>
+          <input className='formInput' type="text" name="user_name" placeholder='Dave' required/>
           <label className='formHeading'>Date</label>
-          <input className='formInput' id='dateInput' type='date' name='date' />
+          <input className='formInput' id='dateInput' type='date' name='date' required/>
           <label className='formHeading'>Time</label>
-          <input className='formInput' id='timeInput' type='time' name='time' />
+          <input className='formInput' id='timeInput' type='time' name='time' required/>
           <label className='formHeading'>Party size</label>
-          <input className='formInput' id='sizeInput' type='number' name='party_size' placeholder='4' />
+          <input className='formInput' id='sizeInput' type='number' name='party_size' placeholder='4' required/>
           <label className='formHeading'>Phone number/Email</label>
-          <input className='formInput' type="text" name="contact_info" placeholder='15920388372  /  Person@outlook.com' />
+          <input className='formInput' type="text" name="contact_info" placeholder='15920388372  /  Person@outlook.com' required/>
           <label className='formHeading'>Message</label>
           <textarea className='formInputMessage' name="message" placeholder='anything you want to tell us?' />
         

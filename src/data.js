@@ -42,39 +42,36 @@ export const Pic_18 ='./Images/Maxime_Map.jpg'
 
 
 
-
-
-// export const Pic_6 ='./Images/Hanburger.jpeg' 
-// export const Pic_7 ='./Images/Ribeye_slice.jpg' 
-// export const Pic_8 ='./Images/Restaurant_prost.jpg' 
-
 //used in Gallery
-export const PictureBlocks = [
-'Images/PictureBlocks/A01.JPG',
-'Images/PictureBlocks/A02.JPG',
-'Images/PictureBlocks/A04.JPG',
-'Images/PictureBlocks/A05.JPG',
-'Images/PictureBlocks/B02.JPG',
-'Images/PictureBlocks/B03.JPG',
-'Images/PictureBlocks/C01.JPG',
-'Images/PictureBlocks/C02.JPG',
-'Images/PictureBlocks/E01.JPG',
-'Images/PictureBlocks/g01.JPG',
-]
+// export const PictureBlocks = [
+// 'Images/PictureBlocks/A01.JPG',
+// 'Images/PictureBlocks/A02.JPG',
+// 'Images/PictureBlocks/A04.JPG',
+// 'Images/PictureBlocks/A05.JPG',
+// 'Images/PictureBlocks/B02.JPG',
+// 'Images/PictureBlocks/B03.JPG',
+// 'Images/PictureBlocks/C01.JPG',
+// 'Images/PictureBlocks/C02.JPG',
+// 'Images/PictureBlocks/E01.JPG',
+// 'Images/PictureBlocks/g01.JPG',
+// ]
 
 //used in gallery
 export const SliderImages = [{
+    id:1,
     title:'News title', 
     text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat rem non fugiat distinctio ratione voluptate iure ad.',
     image: './Images/Relax_window.jpg'
 },
 {
+    id:2,
     title:'News title', 
     text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat rem non fugiat distinctio ratione voluptate iure ad.',
     image: './Images/Hanburger.jpeg' 
 
 },
 {
+    id:3,
     title:'News title', 
     text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat rem non fugiat distinctio ratione voluptate iure ad.',
     image: '' 
@@ -254,7 +251,7 @@ export const items = [
       desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
     },
     {
-      id: 18,
+      id: 20,
       title: 'Apple Pie',
       category: 'Drinks',
       Subcategory: '',

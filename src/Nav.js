@@ -22,12 +22,6 @@ function Nav() {
     };
   })
 
-  // function usePageViews() {
-  //   useEffect(() => {
-  //     console.log(location.pathname);
-  //   }, [location]);
-  // }
-  // usePageViews()
 
 
   return (

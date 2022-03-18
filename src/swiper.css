@@ -1,6 +1,7 @@
 .swiper {
   width: 98%;
   height: 580px;
+  max-width: 1680px;
   margin: 38px 0;
   border: #181818 8px solid;
   border-radius: 18px;
@@ -96,10 +97,17 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .swiper {
+    height: 588px;
+  }
+}
+
 @media (min-width: 1480px) {
   .swiper {
-    height: 68vh;
+    height: 688px;
   }
+
   .sliderHeading {
     font-size: 3.38rem;
   }

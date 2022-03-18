@@ -327,7 +327,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../public/Images/purprle_board.png");
+  background: url("../public/Images/purprle_board.WEBP");
   background-size: cover;
 }
 
@@ -605,6 +605,10 @@
   .iconContainer {
     margin-top: 18px;
   }
+  .gallerySectionImageContainer,
+  .gallerySectionImageContainerInactive {
+    width: 31.8%;
+  }
 }
 
 @media (min-width: 1480px) {
@@ -646,5 +650,9 @@
   }
   .gallerySectionHeading {
     font-size: 1.8rem;
+  }
+  .gallerySectionImageContainer,
+  .gallerySectionImageContainerInactive {
+    width: 42%;
   }
 }

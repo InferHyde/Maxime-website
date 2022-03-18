@@ -118,8 +118,13 @@
 }
 
 .galleryDescriptionFrametitle {
+  font-size: 1.18rem;
   font-weight: bold;
   margin: 8px 0;
+}
+
+.galleryDescriptionFrameText {
+  font-size: 0.88rem;
 }
 
 @media screen and (min-width: 680px) {
@@ -149,6 +154,7 @@
   .displayTitle {
     font-size: 2.8rem;
   }
+
   /* gallery image section */
   .galleryImagesContainer {
     display: grid;

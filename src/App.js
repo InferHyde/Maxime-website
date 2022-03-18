@@ -8,7 +8,6 @@ import Gallery from './Gallery'
 import Menu from './Menu';
 import Info from './Info';
 import Footbar from './Footbar';
-import Reservation_form from './Reservation_form';
 // import ScrollToTop from './ScrollToTop';
 
 
